@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Barsova</title>
+    <link rel="stylesheet" href="/static/styles/prices-and-offers.css">
+    <link rel="stylesheet" href="/static/styles/header_and_footer.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    {% include 'header.html' %}
+ 
+    <select onchange="pageChange(this)" id="select-service">
+      <option value="laser">Лазерна епіляція</option>
+      <option value="electro" >Електроепіляція</option>
+    </select> 
+
+    
+
+
+    {% if page == 'laser' %} 
+
+    <div class="separate-page">
+      <select onchange="changePrices(this)" id="select-price">
+        <option value="separate">Окремі зони</option>
+        <option value="laser-packages">Вигідні комплекси</option>
+      </select>
+       
+      <h1> page with separeted prices</h1>
+    </div>
+
+    {% endif %}
+
+    {% if page == 'laser-packages' %}
+
+    <div class="pachages-page">
+      <select onchange="changePrices(this)" id="select-price">
+        <option value="laser-packages">Вигідні комплекси</option>
+        <option value="separate">Окремі зони</option>
+      </select>
+      <h1> page with packages prices</h1>
+    </div>
+
+    {% endif %}
+
+    
+    {% include 'footer.html' %}   
+    <script src="/static/scripts/laser.js"></script>
+  </body>
+ 
+</html>
