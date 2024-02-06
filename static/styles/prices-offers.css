@@ -10,7 +10,7 @@ body {
   font-weight: bold;
   margin-top: 50px;
   display: block;
-  margin-left: 50px;
+  margin-left: 50px; 
   
 }
 
@@ -53,10 +53,7 @@ body {
 .after, .before {
   position: absolute;
 }
-/*
-.after {
-  margin-left: -255px;
-}*/
+
 
 .photo-container:hover > .before {
   display: none;
@@ -83,21 +80,125 @@ body {
   margin-right: 20px;
 }
 
-.recommendations {
+.recommendations, .contraindication-box {
   margin-left: 120px;
 }
 
-.recommendation {
+.recommendation, .contraindication {
   display: flex;
   align-items: center;
   
 }
 
-.recommendation-text {
+.recommendation-text, .contraindication-text {
   width: 1200px;
   margin: 10px;
 }
 
 .move-right {
-  margin-left: 10px;
+  margin-left: 40px;
 }
+
+.recommendations-photo {
+  position: relative;
+}
+
+.circle-photo {
+  width: 100px;
+  height: 100px;
+  background-color: white;  
+  border-radius: 50%;  
+  display: flex;
+  position: absolute;
+}
+
+.recommendation-photo {
+  width: 50%;    
+  align-self: center;
+  margin:auto
+}
+
+#glass_of_water {
+  top: -200px;
+  right: 100px;
+}
+
+#shower_icon {
+  right: 250px;
+  top: -20px
+}
+
+#talcum-powder {
+  right: 100px;
+  top: 150px
+}
+
+.header-part {
+  margin: 50px;
+ 
+}
+
+
+
+
+
+
+
+ .packages-page { 
+  height: 700px; 
+ }
+
+#select-price {
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 17px;   
+  font-weight: 550;
+  display: block;
+  margin-left: 1250px; 
+  margin-top: -22px;
+  }
+
+
+.container {
+  margin-top: 150px;
+}
+
+.price {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-left: 700px;
+}
+
+.photo {
+  position: relative;
+  width: 300px;
+}
+
+.vectors {
+  top: -20px;
+  position: relative; 
+  left: 150px
+}
+
+.vector {
+  position: absolute;
+  width: 450px;
+  visibility: hidden;
+}
+
+#vector-partleg {
+  visibility: visible;
+}
+
+.choosed {
+  color: rgb(254, 150, 209);
+  cursor: pointer
+}
+
+.packages {
+  display: flex;  
+}
+
+
+
