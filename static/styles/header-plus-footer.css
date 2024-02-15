@@ -1,8 +1,7 @@
 .header, .footer {
   display: flex;
   background-color: rgb(254, 150, 209);  
-  justify-content: space-between; 
-  width: 1550px;
+  justify-content: space-between;  
 }
 
 .header {  
@@ -74,3 +73,5 @@
   display: flex; 
   margin-bottom: 10px;
 }
+
+
