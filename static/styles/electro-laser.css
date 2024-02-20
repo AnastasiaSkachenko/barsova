@@ -222,32 +222,64 @@ body {
 
 
 .laser-text {
-  margin-left: 100px;
+  margin-left: 150px;
   margin-top: 100px;
 }
 
 .container-photo {
-  margin-left: 70px;
+  margin-left: 20px;
 }
 
 .main-photo {
-  width: 400px;
-  z-index: 1;
+  width: 400px; 
+}
+
+.tip-container {
+  position: relative;
 }
 
 .tip-body-part { 
-  visibility: hidden;
-  margin-top: -380px;
-  background-color: rgb(250, 250, 250);
-  border: 7px solid rgba(125, 48, 48, 0.4);
+  visibility: hidden; 
+  background-color: rgb(247, 246, 246);
+  border: 2px solid rgb(222, 220, 220);
   color: rgb(133, 132, 132);
   font-size: 12px;
   width: 35px;
-  padding: 5px;
-  margin-left: 170px;
-  z-index: 7;
+  padding: 2px; 
+  position: absolute;  
 }
 
-.body-part:hover + .tip-body-part {
-  visibility: visible;
+.area {
+  cursor: pointer;
+}
+
+.description-parse{
+  position: absolute;
+  width: 300px;
+  padding: 20px;
+  background-color: rgb(254, 150, 209);
+  border-radius: 30px;
+  visibility: hidden;
+}
+
+#face-description, #legs-description {
+  top: 150px
+}
+
+.description-row {
+  display: flex;
+  justify-content: space-between;  
+}
+
+
+#armpits-description, #chest-description, #belly-description, #bikini-description, #hands-description {
+  top: 200px;  
+}
+
+ 
+
+
+
+.description-container {
+  position: relative;
 }

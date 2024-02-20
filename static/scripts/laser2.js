@@ -96,16 +96,16 @@ function showTip(element) {
     tip.style.right = '150px'
   } else if (element.id == 'belly') {
     tip= document.getElementById('belly-tip') 
-    tip.style.top = '190px'
+    tip.style.top = '180px'
     tip.style.right = '135px'
   } else if (element.id == 'left-hand') {
     tip= document.getElementById('hands-tip') 
-    tip.style.top = '190px'
-    tip.style.right = '150px'
+    tip.style.top = '155px'
+    tip.style.right = '185px'
   } else if (element.id == 'right-hand') {
     tip= document.getElementById('hands-tip') 
-    tip.style.top = '125px'
-    tip.style.right = '150px'
+    tip.style.top = '155px'
+    tip.style.right = '110px'
   } else if (element.id == 'legs-area') {
     tip= document.getElementById('legs-tip') 
     tip.style.top = '235px'

@@ -276,6 +276,10 @@ body {
   top: 200px;  
 }
 
+#chest-description {
+  top: 250px
+}
+
 .description-container {
   position: relative;
 }

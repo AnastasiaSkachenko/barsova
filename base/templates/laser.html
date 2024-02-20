@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Barsova</title>
-    <link rel="stylesheet" href="/static/styles/electro-laser1.css">
+    <link rel="stylesheet" href="/static/styles/electro-laser.css">
     <link rel="stylesheet" href="/static/styles/header-plus-footer.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,10 +44,16 @@
           <img class="main-photo" src="/static/images/figure-clean.svg" usemap="#bodyparts" width="400" height="517">
 
           <map name="bodyparts"> 
-            <area class="body-part" class="area" shape="circle" coords="165, 170, 15"  alt="armpit-left" id="armpit-left" onmouseover="showTip(this)" onclick="displayDesctiption(this)" onmouseleave="hideTip(this)">
-            <area class="body-part" shape="circle" coords="220, 170, 15"  alt="armpit-right" id="armpit-right" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">
-            <area style="cursor: pointer" class="body-part" shape="poly" coords="150, 40, 185, 30, 210, 25, 230, 70, 240, 95, 250, 105, 240, 110, 180, 115, 170, 110 " alt="face" id="face-area" onclick="displayDesctiption(this)" onmouseover="showTip(this)" onmouseleave="hideTip(this)">
- 
+            <area class="body-part area" shape="circle" coords="165, 170, 13"  alt="armpit-left" id="armpit-left" onmouseover="showTip(this)" onclick="displayDesctiption(this)" onmouseleave="hideTip(this)">
+            <area class="body-part" shape="circle" coords="220, 170, 13"  alt="armpit-right" id="armpit-right" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">
+            <area class="body-part"  shape="poly" coords="150, 40, 185, 30, 210, 25, 230, 70, 240, 95, 250, 105, 240, 110, 180, 115, 170, 110 " alt="face" id="face-area" onclick="displayDesctiption(this)" onmouseover="showTip(this)" onmouseleave="hideTip(this)">
+            <area class="body-part" shape="rect" coords="160, 155, 205, 190" alt="chest" id="chest" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">
+            <area class="body-part" shape="rect" coords="175, 245, 205, 275" alt="bikini" id="bikini" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">
+            
+            <area class="body-part" shape="poly" coords="170, 185, 215, 185, 223, 200, 230, 245, 155, 245,  165, 200" alt="belly" id="belly" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">
+            <area class="body-part" shape="poly" coords="140, 160, 160, 180, 160, 205, 150, 245, 155, 260, 150, 265, 135, 240, 150, 295, 133, 260, 135, 245, 138, 205" alt="left-hand" id="left-hand" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">                        
+            <area class="body-part" shape="poly" coords="220, 180, 240, 160, 252, 205, 254, 240, 262, 245,   245, 290, 223, 255, 233, 240, 226, 210" alt="right-hand", id="right-hand" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">
+            <area class="body-part" shape="poly" coords="150, 260, 236, 260, 215, 350, 225, 385, 215, 450, 230, 485, 155, 485, 175, 450, 160, 385, 170, 350" alt="legs-area" id="legs-area" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">
           </map>
           
           
@@ -55,6 +61,11 @@
         <div class="tip-container">
           <div class="tip-body-part" id="armpit">Пахви</div> 
           <div class="tip-body-part" id="face">Лице</div>
+          <div class="tip-body-part" id="chest-tip">Груди</div>
+          <div class="tip-body-part" id="bikini-tip">Пах</div>
+          <div class="tip-body-part" id="belly-tip">Живіт</div>
+          <div class="tip-body-part" id="hands-tip">Руки</div> 
+          <div class="tip-body-part" id="legs-tip">Ноги</div>
         </div>
         <div class="description-container">
           <div class="description-row description-parse" id="armpits-description">
@@ -75,6 +86,62 @@
               <p>400 крон</p>
             </div>
           </div>
+          <div class="description-parse" id="chest-description">
+            <div class="description-row">
+              <p>Ореол молочних залоз</p>
+              <p>250 крон</p>
+            </div>
+            <div class="description-row">
+              <p>Груди</p>
+              <p>800 крон</p>
+            </div>
+          </div>
+          <div class="description-parse" id="bikini-description">
+            <div class="description-row">
+              <p>Класичне бікіні</p>
+              <p>700 крон</p>
+            </div>
+            <div class="description-row">
+              <p>Глибоке бікіні</p>
+              <p>900 крон</p>
+            </div>
+          </div>
+          <div class="description-parse" id="belly-description">
+            <div class="description-row">
+              <p>Лінія живота</p>
+              <p>400 крон</p>
+            </div>
+            <div class="description-row">
+              <p>Живіт повністю</p>
+              <p>800 крон</p>
+            </div>
+          </div>
+          <div class="description-parse" id="hands-description">
+            <div class="description-row">
+              <p>Руки до ліктя</p>
+              <p>400 крон</p>
+            </div>
+            <div class="description-row">
+              <p>Руки повністю</p>
+              <p>700 крон</p>
+            </div>
+          </div>
+          <div class="description-parse" id="legs-description">
+            <div class="description-row">
+              <p>Ноги до коліна</p>
+              <p>800 крон</p>
+            </div>
+            <div class="description-row">
+              <p>Ноги вище коліна</p>
+              <p>900 крон</p>
+            </div>
+            <div class="description-row">
+              <p>Ноги повністю</p>
+              <p>1400 крон</p>
+            </div>
+          </div>
+           
+
         </div>
       </div>  
 
@@ -132,7 +199,7 @@
 
     
     {% include 'footer.html' %}   
-    <script src="/static/scripts/laser1.js"></script>
+    <script src="/static/scripts/laser2.js"></script>
   </body>
  
 </html>
