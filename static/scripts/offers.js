@@ -12,6 +12,10 @@ for (let i=1; i<5; i++) {
  
 document.querySelector('.photos-to-compare').innerHTML = beforeAfterLaserAll
 
+
+
+
+
 let recommendationsAll = `<h4 class='move-right'>До процедури</h4>`
 
 let recommendationsBefore = [

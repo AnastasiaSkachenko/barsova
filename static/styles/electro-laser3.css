@@ -41,7 +41,7 @@ body {
   font-weight: bold;
 }
 
-.photos-to-compare {
+.photos-to-compare, .photos-to-compare-laser {
   display: flex;
   justify-content: space-between;
   width: 1000px; 
@@ -262,7 +262,7 @@ body {
   visibility: hidden;
 }
 
-#face-description {
+#face-description, #legs-description {
   top: 150px
 }
 
@@ -272,13 +272,13 @@ body {
 }
 
 
-#armpits-description {
+#armpits-description, #chest-description, #belly-description, #bikini-description, #hands-description {
   top: 200px;  
 }
 
-#chest-description {
-  top: 250px
-}
+ 
+
+
 
 .description-container {
   position: relative;

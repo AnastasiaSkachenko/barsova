@@ -41,7 +41,7 @@ body {
   font-weight: bold;
 }
 
-.photos-to-compare {
+.photos-to-compare, .photos-to-compare-laser {
   display: flex;
   justify-content: space-between;
   width: 1000px; 
