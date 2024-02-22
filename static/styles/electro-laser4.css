@@ -114,12 +114,12 @@ body {
   border-radius: 50%;  
   display: flex;
   position: absolute;
+  align-items: center;
 }
 
 .recommendation-photo {
   width: 50%;    
-  align-self: center;
-  margin:auto
+  margin: auto;
 }
 
 #glass_of_water {
@@ -276,10 +276,43 @@ body {
   top: 200px;  
 }
 
- 
-
 
 
 .description-container {
   position: relative;
 }
+
+
+.contraindication-hard, .contraindication-light {
+  display: inline-block;
+  width: 700px;
+}
+
+.cross-line {
+  width: 200px;
+  transform: rotate(135deg); 
+  background-color: red;
+  height: 5px;
+  z-index: 3;
+  margin-left: -100px;
+}
+
+.recommendation-photo-laser { 
+  width: 70px;
+  margin: 15px
+}
+
+#sun {
+  left: 1000px; 
+}
+
+#razor {
+  left: 1100px
+}
+
+#tweezers {
+  left: 1000px;
+  
+}
+
+ 
