@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background-color: rgb(254, 205, 235);
+}
+
+.star {
+  font-size: 20px;
+  cursor: pointer;
+  color: white
+}
+
+.star-triggered {
+  color: gold
+}
+
+#radio-validation {
+  visibility: hidden;
+}
+ 
+
+.label-radio {
+  border: none;
+  background-color: transparent;
+  padding: 3px;
+  font-size: 30px;
+}
+
+
+.name-field, .description-field { 
+  border: none;
+  border-bottom: 2px solid black; 
+  width: 600px;
+  background-color: transparent; 
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.description-field {
+  height: 100px; 
+  font-size: 16px; 
+}
+
+.form-box {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+}
+
+.title {
+  margin-left: 45%;
+  margin-top: 30px;
+  margin-bottom: 500px;
+}
+
+.service-box {
+  border: none; 
+  background-color: transparent;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+
+.service-box:focus, .name-field:focus, .description-field:focus {
+  outline: none
+}
+
+.button-form-submit {
+  width: 150px;
+  background-color: rgb(254, 150, 209);
+  border-color: rgb(254, 150, 209);
+  margin-left: 35%;
+  margin-top: 10px;
+}
+
+.stars-box {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.title-rating {
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+h3 {
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.button-leave-review {
+  margin-left: 1300px;
+  padding: 15px;
+  padding-left: 35px;
+  padding-right: 35px;
+  background-color: rgb(254, 150, 209);
+  border-radius: 10px;
+  border:none
+}
