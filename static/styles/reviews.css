@@ -3,6 +3,8 @@ body {
   background-color: rgb(254, 205, 235);
 }
 
+
+
 .star {
   font-size: 20px;
   cursor: pointer;
@@ -102,5 +104,56 @@ h3 {
   padding-right: 35px;
   background-color: rgb(254, 150, 209);
   border-radius: 10px;
-  border:none
+  border:none;
+  cursor: pointer;
+}
+
+.reviews-container {
+  margin-left: 100px;
+}
+
+.review-container p {
+  margin: 10px;
+  margin-left: 0;
+  
+}
+
+.review-container {
+  padding: 20px;
+  margin: 30px;
+  background-color: rgba(128, 128, 128, 0.053);
+  width: 1200px;
+}
+
+.review-name {
+  text-transform: capitalize;
+}
+
+.rating-service {
+  display: flex;
+}
+.rating-service img {
+  width: 100px;
+}
+
+.rating-service  p {
+  color: gray;
+  margin-left: 20px;
+}
+
+#show-more {
+  padding: 15px;
+  background-color: rgb(254, 150, 209);
+  border-radius: 10px;
+  border: none;
+  margin-left: 47%;
+  cursor: pointer
+}
+
+.hidden-review {
+  display: none;
+}
+
+.visible-review {
+  display: block;
 }
