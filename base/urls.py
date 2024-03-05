@@ -8,5 +8,7 @@ urlpatterns = [
     path('laser-packages/', views.laser_packages, name='laser-packeges'),
     path('reviews/', views.reviews_page, name='reviews'),
     path('reviews-data/', views.reviews_data, name='reviews-data'),
-    path('leave-review/', views.leave_review, name='leave-review')
+    path('leave-review/', views.leave_review, name='leave-review'),
+    path('contact/', views.contact, name='contact'),
+    path('sertificates/', views.sertificates, name='sertificates')
     ]

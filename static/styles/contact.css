@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: rgb(254, 205, 235);
+}
+
+h5 {
+  margin-left: 100px;
+  margin-top: 70px;
+  width: 800px;
+}
+
+.contacts {
+  width: 400px;
+  display: inline-block;
+  margin-top: 180px;
+  margin-left: 270px;
+}
+
+.contact p {
+  display: inline; 
+}
+
+.contact a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact a, .contact p {
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.contact-photo { 
+  width: 400px;
+  display: inline-block;
+  margin-left: 250px; 
+  margin-top: -200px;
+}

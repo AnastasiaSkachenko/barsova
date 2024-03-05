@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           data.forEach(row => {
             let review = row.fields
-            if (count >= 5) {
+            if (count >= 15) {
               reviewHTML = `
               <div class='review-container hidden-review'>
                 <p class='review-name'>${review.name}</p>
@@ -90,11 +90,11 @@ let showMoreButton = document.getElementById('show-more')
 function showMore() { 
   let hiddenReviews = Array.from(container.querySelectorAll('.hidden-review'))
   console.log(hiddenReviews)
-  hiddenReviews.splice(0, 5).forEach(review => {
+  hiddenReviews.splice(0, 15).forEach(review => {
     review.classList.add('visible-review')
     review.classList.remove('hidden-review')
   })
-  if (hiddenReviews.length < 5) {
+  if (hiddenReviews.length < 15) {
     showMoreButton.style.display = 'none'
   }
 }

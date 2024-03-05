@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  background-color: rgb(254, 205, 235); 
+}
+
+.scroller-content {
+  display: flex;
+  transition: transform 0.3s ease; 
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 1300px;
+  position: relative; 
+  overflow: hidden; 
+}
+
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+#scrollLeftButton {
+  margin-left: 60px;
+  margin-top: 40px;
+}
+
+#scrollRightButton {
+  right: 30px;
+  margin-top: 40px
+
+}
+h4 {
+  margin-left: 45%;
+  margin-top: 40px;
+}
+
+.sertificate { 
+  width: 350px;
+  margin-left: 50px;
+  margin-right: 50px;
+}

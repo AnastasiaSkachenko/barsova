@@ -18,7 +18,8 @@ body {
 #radio-validation {
   visibility: hidden;
   color: red;
-  margin-top: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
 }
  
 

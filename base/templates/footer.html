@@ -1,12 +1,12 @@
 <div class="footer">
   <img class="logo" src="/static/images/barsova_logo.svg">
   <div  class="column-1">
-    <a href="http://127.0.0.1:8000/" class="link-footer">Про мене</a>
-    <a href="http://127.0.0.1:8000/reviews/" class="link-footer">Відгуки</a>
+    <a href="{% url 'main-page'%}" class="link-footer">Про мене</a>
+    <a href="{% url 'reviews' %}" class="link-footer">Відгуки</a>
   </div>
   <div class="column-2">
-    <a href="http://127.0.0.1:8000/electrolysis/" class="link-footer">Послуги та ціни</a>
-    <a class="link-footer">Сертифікати</a>
+    <a href="{% url 'electrolysis'%}" class="link-footer">Послуги та ціни</a>
+    <a href="{% url 'sertificates' %}" class="link-footer">Сертифікати</a>
   </div>
   <div class="column-3">
     <div class="phone">
@@ -19,8 +19,8 @@
     </div>
   </div>
   <div class="social-media">
-    <img src="/static/images/facebook_icon.svg">
-    <img src="/static/images/instagram_icon.svg">
-    <img src="/static/images/telegramo_icon.svg">
+    <a href="https://www.instagram.com/barsova.deal/">
+      <img src="/static/images/instagram_icon.svg">
+    </a> 
   </div>
 </div>
