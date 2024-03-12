@@ -1,3 +1,75 @@
+import i18next from './i18next.js';
+
+i18next.init({
+  lng: 'ua',
+  resources: {
+    en: {
+      translation: {
+        main_1: `My name is Anastasia. I am 22 years old and I have been in the beauty industry since I was 15.
+        Having tried various professions in beauty, my choice finally settled on hair removal. 
+        Why? Because it is hair removal that solves one of the most important girls' problems.
+        Excess hair is annoying, makes you feel ashamed and refuse many events in life if you "forgot to shave".  
+        Epilation helps to get rid of skin problems caused by unwanted hair.
+        And I like to help people. That is why the same "match" happened to me with epilation`,
+        main_2: `My journey began with a manicure. I enjoyed working with  
+        clients and create beauty, but I realized that manicure is not my favorite thing.  
+         The fate of a young specialist is not as simple as it may seem at first glance.  To the young master
+        not everyone is ready to trust, but in my city I was able to gain the trust of girls
+        and solve their unwanted hair queries.`,
+        before_after_input: `Drag the line on the photo to compare before and after`,
+        main_3: `My studio in my hometown existed until the city was left without electricity.  
+        I was ready to work on enthusiasm, but, unfortunately, the devices   could not work on it.
+       That is why, now I work  in Stockholm and am ready to make smooth skin for local girls  
+       I also hope for your trust`
+      }
+    },
+    ua: {
+      translation: {
+        main_1: `Мене звати Анастасія. Мені 22 роки і в б'ютісфері я з 15 років. 
+        Спробувавши різні професії в бьюті, мій вибір остаточно зупинився саме на епіляції. 
+        Чому? Тому що саме епіляція вирішує одну з найголовніших дівочих проблем. 
+        Зайве волосся дратує, змушує соромитись і відмовлятись від багатьох подій у житті якщо «забула поголитись».  
+        Епіляція допомагає позбутися від проблем зі шкірою, які виникають через небажане волосся. 
+        А я люблю допомагати людям. Саме тому у мене з епіляцією стався той самий match`,
+        main_2: `Мій шлях почався з манікюра. Мені сподобалося працювати з  
+        клієнтами і створювати красу, але я зрозуміла, що манікюр – не моя улюблена справа. 
+          Доля молодого спеціаліста не така проста як може здатися на перший погляд.   Молодому майстру
+        не всі готові довіряти, але у своєму місті я змогла завоювати довіру дівчат 
+        і вирішити їх запити з небажаним волоссям.`,
+        before_after_input: `Потягни за лінію на фото щоб порівняти до та після`,
+        main_3: `Моя студія в рідному місті існувала аж допоки місто не залишилось без струму. 
+        Я готова була працювати на ентузіазмі, але апарати, нажаль, на ньому   працювати не змогли. 
+       Саме тому, зараз я працюю   в Стокгольмі і готова робити гладку шкіру місцевим дівчатам  
+       Сподіваюсь і на вашу довіру `
+      }
+    }
+  }
+})
+
+window.changeLanguage = function () {
+  let selectedLanguage = document.getElementById('languageSelector').value;
+  i18next.changeLanguage(selectedLanguage); 
+  updateContent();
+}
+
+
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    element.textContent = i18next.t(key);
+  });
+}
+
+updateContent();
+
+
+
+
+
+
+
+
 let beforeAfterAll = ``
 
 

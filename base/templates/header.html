@@ -6,11 +6,10 @@
     <a href="{% url 'reviews'%}" class="link">Відгуки</a>
     <a href="{% url 'contact' %}" class="link">Зв'язок зі мною</a>
   </div> 
-  <select class="language-switch" id="languageSelect">
-    <option value="en">En</option>
+  <select class="language-switch" id="languageSelector" onchange="changeLanguage()">
     <option value="ua">Ук</option> 
+    <option value="en">En</option>
   </select>
-
 </div>
 
  
