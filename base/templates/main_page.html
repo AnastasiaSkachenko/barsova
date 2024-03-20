@@ -11,6 +11,8 @@
   </head>
 
   <body>
+    
+
     {% include 'header.html' %}
     <div class="part-main">
     <p data-i18n="main_1" class="about-main-1"></p>
@@ -37,7 +39,8 @@
     </div>
 
     {% include 'footer.html' %}  
-  <script type="module" src="/static/scripts/main.js"></script>
+    <script type="module" src="{% static '/scripts/main.js' %}"></script> 
+    <script type="module" src="{% static '/scripts/header-footer.js' %}"></script> 
   </body>
  
 </html>

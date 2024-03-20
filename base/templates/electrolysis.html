@@ -14,47 +14,44 @@
     {% include 'header.html' %}
  
     <select onchange="pageChange(this)" id="select-service">
-      <option value="electro" >Електроепіляція</option>
-      <option value="laser">Лазерна епіляція</option>
+      <option data-i18n="electro" value="electro"></option>
+      <option data-i18n="laser" value="laser"></option>
     </select>
     <div class="container-prices">
 
     
       <div class="text-block">
-        <h3>Що таке електроепіляція?</h3>
-        <p class="description" >Це єдиний спосіб, що прибирає будь-яке волосся назавжди <br>
-          незалежно від того який це тип волосся світлий рижий чи сідий. <br> 
-          Видалення відбувається кожного волоска окремо. <br>
-          Спеціаліст вводить спеціальну голку у волосяний фолікул <br>
-          та термічним розрядом зпаює фолікул.</p>
+        <h3 data-i18n="whatIsDepilation"></h3>
+        <p data-i18n="aboutDepilation" class="description" ></p>
       </div>
       
 
       <div class="prices">
-        <p>1 година роботи на будь якій зоні 900 sek</p>
-        <h3>Вигідні тарифи</h3>
-        <p>2 години - 1600 крон (замість 1800 крон)</p>
-        <p>5 годин - 3500 крон (замість 4500 крон)</p>
-        <p>10 годин - 6500 крон (замість 9000 крон)</p>
-        <h3>Додатково</h3>
-        <p>Ін’єкційне знеболення - 25 крон за ампулу</p>
-        <p>Аплікаційне знебодення - 350 крон за тюбик</p>
+        <p data-i18n="oneHour"></p>
+        <h3 data-i18n="favorableRates"></h3>
+        <p data-i18n="twoHours"></p>
+        <p data-i18n="fiveHours"></p>
+        <p data-i18n="tenHours"></p>
+        <h3 data-i18n="extra"></h3>
+        <p data-i18n="injection"></p>
+        <p data-i18n="aplication"></p>
       </div>
     </div>
 
-    <h3 class="before-after-title">До/Після</h3> 
+    <h3 class="before-after-title"></h3> 
     <div class="photos-to-compare"></div>
-    <p class="tip-before-after">Наведи курсор на фото, щоб побачити результат</p>
+    <p data-i18n="tipBeforeAfter" class="tip-before-after"></p>
 
-    <h2 class="header-part">Рекомендації</h2>
-    <div class="recommendations"></div>
+    <h2 class="header-part"></h2>
+    <div data-i18n="recommendations" class="recommendations"></div>
 
-    <h2 class="header-part">Протипоказання</h2>
-    <div class="contraindication-box"></div>
+    <h2 class="header-part"></h2>
+    <div data-i18n="contraindications" class="contraindication-box"></div>
     
  
     {% include 'footer.html' %}   
-    <script src="/static/scripts/prices-offers.js"></script>
+    <script type="module" src="/static/scripts/electrolysis1.js"></script>
+    <script type="module" src="{% static '/scripts/header-footer.js' %}"></script> 
   </body>
  
 </html>

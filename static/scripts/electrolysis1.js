@@ -1,4 +1,73 @@
- 
+import i18next from './i18next.js';
+
+
+let translation = i18next.init({
+  debug:true,
+  lng: 'ua',
+  resources: {
+    en: {
+      translation: {
+        electro: 'Electrolysis',
+        laser: 'Laser',
+        whatIsDepilation: 'What is electrolysis?',
+        aboutDepilation: `This is the only method that removes any hair permanently
+        regardless of the type of hair, light red or gray.
+        Each hair is removed separately.
+        The specialist inserts a special needle into the hair follicle
+        and thermal discharge solders the follicle.`,
+        oneHour: '1 hour of work in any zone - 900 sek',
+        favorableRates: 'Favorable rates', 
+        twoHours: '2 hours - 1600 krons (instead of 1800 kroner)',
+        fiveHours: '5 hours - 3500 kroner (instead of 4500 kroner)',
+        tenHours: '10 hours - 6,500 kroner (instead of 9,000 kroner)',
+        extra: 'Extra',
+        injection: 'Injection anesthesia - 25 crowns per ampoule',
+        aplication: 'Application anesthesia - 350 kroner per tube',
+        beforeAfter: 'Before/After',
+        tipBeforeAfter: 'Hover over the photo to see the result',
+        recommendations: 'Recommendations',
+        contraindications: 'Contraindications',
+        about: 'About',
+        offers: 'Offers',
+        reviews: 'Reviews',
+        contact_me: 'Contact me',
+        sertificates: 'Sertificates'
+      }
+    },
+    ua: {
+      translation: {
+        electro: 'Електроепіляція',
+        laser: 'Лазерна епіляція',
+        whatIsDepilation: 'Що таке електроепіляція?',
+        aboutDepilation: `Це єдиний спосіб, що прибирає будь-яке волосся назавжди
+        незалежно від того який це тип волосся світлий рижий чи сідий. 
+        Видалення відбувається кожного волоска окремо. 
+        Спеціаліст вводить спеціальну голку у волосяний фолікул 
+        та термічним розрядом зпаює фолікул.`,
+        oneHour: '1 година роботи на будь якій зоні - 900 sek',
+        favorableRates: 'Вигідні тарифи',
+        twoHours: '2 години - 1600 крон (замість 1800 крон)',
+        fiveHours: '5 годин - 3500 крон (замість 4500 крон)', 
+        tenHours: '10 годин - 6500 крон (замість 9000 крон)',
+        extra: 'Додатково',
+        injection: 'Ін’єкційне знеболення - 25 крон за ампулу',
+        aplication: 'Аплікаційне знеболення - 350 крон за тюбик',
+        beforeAfter: 'До/Після',
+        tipBeforeAfter: 'Наведи курсор на фото, щоб побачити результат',
+        recommendations: 'Рекомендації',
+        contraindications: 'Протипоказання',
+        about: 'Про мене',
+        offers: 'Послуги та ціни',
+        reviews: 'Відгуки',
+        contact_me: "Зв'язок зі мною", 
+        sertificates: 'Сертифікати'
+      }
+    }
+  }
+})
+
+
+
 
 function pageChange(selectElement) {
   console.log(selectElement.value)

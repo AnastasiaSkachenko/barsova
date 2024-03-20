@@ -1,15 +1,17 @@
+{% load static %}
 <div class="header">   
   <img class="logo" src="/static/images/barsova_logo.svg"> 
   <div class="links">
-    <a href="{% url 'main-page'%}" class="link">Про мене</a>
-    <a href="{% url 'electrolysis' %}" class="link">Послуги та ціни</a>
-    <a href="{% url 'reviews'%}" class="link">Відгуки</a>
-    <a href="{% url 'contact' %}" class="link">Зв'язок зі мною</a>
+    <a data-i18n="about" href="{% url 'main-page'%}" class="link">Про мене</a>
+    <a data-i18n="offers" href="{% url 'electrolysis' %}" class="link">Послуги та ціни</a>
+    <a data-i18n="reviews" href="{% url 'reviews'%}" class="link">Відгуки</a>
+    <a data-i18n="contact_me" href="{% url 'contact' %}" class="link">Зв'язок зі мною</a>
   </div> 
   <select class="language-switch" id="languageSelector" onchange="changeLanguage()">
     <option value="ua">Ук</option> 
     <option value="en">En</option>
   </select>
 </div>
+
 
  

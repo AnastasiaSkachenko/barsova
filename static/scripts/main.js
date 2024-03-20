@@ -1,6 +1,8 @@
 import i18next from './i18next.js';
+ 
 
-i18next.init({
+let translation = i18next.init({
+  debug: true,
   lng: 'ua',
   resources: {
     en: {
@@ -19,8 +21,13 @@ i18next.init({
         before_after_input: `Drag the line on the photo to compare before and after`,
         main_3: `My studio in my hometown existed until the city was left without electricity.  
         I was ready to work on enthusiasm, but, unfortunately, the devices   could not work on it.
-       That is why, now I work  in Stockholm and am ready to make smooth skin for local girls  
-       I also hope for your trust`
+        That is why, now I work  in Stockholm and am ready to make smooth skin for local girls  
+        I also hope for your trust`,
+        about: 'About',
+        offers: 'Offers',
+        reviews: 'Reviews',
+        contact_me: 'Contact me',
+        sertificates: 'Sertificates'
       }
     },
     ua: {
@@ -39,29 +46,24 @@ i18next.init({
         before_after_input: `Потягни за лінію на фото щоб порівняти до та після`,
         main_3: `Моя студія в рідному місті існувала аж допоки місто не залишилось без струму. 
         Я готова була працювати на ентузіазмі, але апарати, нажаль, на ньому   працювати не змогли. 
-       Саме тому, зараз я працюю   в Стокгольмі і готова робити гладку шкіру місцевим дівчатам  
-       Сподіваюсь і на вашу довіру `
+        Саме тому, зараз я працюю   в Стокгольмі і готова робити гладку шкіру місцевим дівчатам  
+        Сподіваюсь і на вашу довіру `, 
+        about: 'Про мене',
+        offers: 'Послуги та ціни',
+        reviews: 'Відгуки',
+        contact_me: "Зв'язок зі мною", 
+        sertificates: 'Сертифікати'
       }
     }
   }
 })
 
-window.changeLanguage = function () {
-  let selectedLanguage = document.getElementById('languageSelector').value;
-  i18next.changeLanguage(selectedLanguage); 
-  updateContent();
-}
+ 
+ 
 
 
 
-function updateContent() {
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    element.textContent = i18next.t(key);
-  });
-}
-
-updateContent();
+ 
 
 
 
@@ -117,3 +119,4 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 })
 
+ 
