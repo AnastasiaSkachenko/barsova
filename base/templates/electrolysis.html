@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="{% static '/styles/header-and-footer.css' %}"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
   </head>
 
   <body>
+    
     {% include 'header.html' %}
  
-    <select onchange="pageChange(this)" id="select-service">
+    <select id="select-service">
       <option data-i18n="electro" value="electro"></option>
       <option data-i18n="laser" value="laser"></option>
     </select>
@@ -38,19 +39,19 @@
       </div>
     </div>
 
-    <h3 class="before-after-title"></h3> 
+    <h4 class="before-after-title"></h4> 
     <div class="photos-to-compare"></div>
     <p data-i18n="tipBeforeAfter" class="tip-before-after"></p>
 
-    <h2 class="header-part"></h2>
-    <div data-i18n="recommendations" class="recommendations"></div>
+    <h2 data-i18n="recommendations" class="header-part"></h2>
+    <div class="recommendations"></div>
 
-    <h2 class="header-part"></h2>
-    <div data-i18n="contraindications" class="contraindication-box"></div>
+    <h2 data-i18n="contraindications" class="header-part"></h2>
+    <div  class="contraindication-box"></div>
     
  
     {% include 'footer.html' %}   
-    <script type="module" src="/static/scripts/electrolysis1.js"></script>
+    <script type="module" src="{% static '/scripts/electrolysis.js'%}"></script>
     <script type="module" src="{% static '/scripts/header-footer.js' %}"></script> 
   </body>
  
