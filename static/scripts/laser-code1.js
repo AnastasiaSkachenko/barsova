@@ -1,20 +1,16 @@
-function pageChange(selectElement) { 
+document.getElementById('select-service').addEventListener('change', function() {
+  event.preventDefault(); 
+  pageChange(this);
+});
+
+function pageChange(selectElement) {
+  console.log(selectElement.value)
   if (selectElement.value == 'laser') {
     window.location.href = 'http://127.0.0.1:8000/laser/'
   } else if(selectElement.value == 'electro') {
     window.location.href = 'http://127.0.0.1:8000/electrolysis/'
   }
 }
-
-function changePrices(selectElement) {
-  console.log(selectElement.value)
-  if (selectElement.value == 'separate') {
-    window.location.href = 'http://127.0.0.1:8000/laser/'
-  } else if(selectElement.value == 'laser-packages') {
-    window.location.href = 'http://127.0.0.1:8000/laser-packages/'
-  }
-}
-
 function displayVector(element) {
   let id = element.id
   let vectors = document.querySelectorAll('.vector') 
@@ -244,7 +240,7 @@ contraindicationsLightList.forEach(item => {
   
 })
  
-console.log(contraindicationsHard)
+ 
 
 document.querySelector('.contraindication-hard').innerHTML = contraindicationsHard
 document.querySelector('.contraindication-light').innerHTML = contraindicationsLight

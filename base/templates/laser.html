@@ -14,9 +14,9 @@
     
     {% include 'header.html' %}
  
-    <select onchange="pageChange(this)" id="select-service">
-      <option value="laser">Лазерна епіляція</option>
-      <option value="electro" >Електроепіляція</option>
+    <select id="select-service">
+      <option data-i18n="laser" value="laser" ></option>
+      <option data-i18n="electro" value="electro"></option>
     </select> 
 
     
@@ -26,19 +26,16 @@
 
     <div class="separate-page">
       <select onchange="changePrices(this)" id="select-price">
-        <option value="separate">Окремі зони</option>
-        <option value="laser-packages">Вигідні комплекси</option>
+        <option data-i18n="separate_zones" value="separate"></option>
+        <option data-i18n="beneficial_compelexes" value="laser-packages"></option>
       </select>
        
-      <p class="tip-cursor">Наведи курсор на частину тіла на якій бажаєш зробити епіляцію</p>
+      <p data-i18n="tip_cursor" class="tip-cursor"></p>
 
       <div class="laser-detailes">
         <div class="laser-text">
-          <h3>Що таке лазерна епіляція?</h3>
-          <p class="description">Лазерна епіляція – це метод видалення волосся
-            за допомогою лазерного випромінювання. Принцип роботи полягає в тому,
-            що лазерний промінь спрямовується на волосяний фолікул, який містить пігмент меланін.
-             Лазерне випромінювання нагріває меланін, руйнуючи його разом з волосяною цибулиною.</p>
+          <h3 data-i18n="what_is_laser"></h3>
+          <p data-i18n="laser_description" class="description"></p>
         </div>
         <div class="container-photo">
           <img class="main-photo" src="/static/images/figure-clean.svg" usemap="#bodyparts" width="400" height="517">
@@ -59,85 +56,85 @@
           
         </div>
         <div class="tip-container">
-          <div class="tip-body-part" id="armpit">Пахви</div> 
-          <div class="tip-body-part" id="face">Лице</div>
-          <div class="tip-body-part" id="chest-tip">Груди</div>
-          <div class="tip-body-part" id="bikini-tip">Пах</div>
-          <div class="tip-body-part" id="belly-tip">Живіт</div>
-          <div class="tip-body-part" id="hands-tip">Руки</div> 
-          <div class="tip-body-part" id="legs-tip">Ноги</div>
+          <div data-i18n="armpits" class="tip-body-part" id="armpit"></div> 
+          <div data-i18n="face" class="tip-body-part" id="face"></div>
+          <div data-i18n="breast" class="tip-body-part" id="chest-tip"></div>
+          <div data-i18n="bikini" class="tip-body-part" id="bikini-tip"></div>
+          <di data-i18n="belly" class="tip-body-part" id="belly-tip"></di>
+          <div data-i18n="hands" class="tip-body-part" id="hands-tip"></div> 
+          <div data-i18n="legs" class="tip-body-part" id="legs-tip"></div>
         </div>
         <div class="description-container">
           <div class="description-row description-parse" id="armpits-description">
-            <p>Пахви</p>
-            <p>600 крон</p>
+            <p data-i18n="armpits"></p>
+            <p data-i18n="krons_600"></p>
           </div>
           <div class="description-parse" id="face-description">
             <div class="description-row">
-              <p>Верхня губа | підборіддя</p>
-              <p>400 крон</p>
+              <p data-i18n="upp_lip_chin"></p>
+              <p data-i18n="krons_400"></p>
             </div>
             <div class="description-row">
-              <p>Бакенбарди</p>      
-              <p>400 крон</p>
+              <p data-i18n="whiskers"></p>      
+              <p data-i18n="whiskers"></p>
             </div>
             <div class="description-row">
-              <p>Обличчя повністю</p>
-              <p>400 крон</p>
+              <p data-i18n="whole_face"></p>
+              <p data-i18n="krons_400"></p>
             </div>
           </div>
           <div class="description-parse" id="chest-description">
             <div class="description-row">
-              <p>Ореол молочних залоз</p>
-              <p>250 крон</p>
+              <p data-i18n="halo"></p>
+              <p data-i18n="krons_250"></p>
             </div>
             <div class="description-row">
-              <p>Груди</p>
-              <p>800 крон</p>
+              <p data-i18n="breast"></p>
+              <p data-i18n="krons_800"></p>
             </div>
           </div>
           <div class="description-parse" id="bikini-description">
             <div class="description-row">
-              <p>Класичне бікіні</p>
-              <p>700 крон</p>
+              <p data-i18n="classic_bikini"></p>
+              <p data-i18n="krons_700"></p>
             </div>
             <div class="description-row">
-              <p>Глибоке бікіні</p>
-              <p>900 крон</p>
+              <p data-i18n="deep_bikini"></p>
+              <p data-i18n="krons_900"></p>
             </div>
           </div>
           <div class="description-parse" id="belly-description">
             <div class="description-row">
-              <p>Лінія живота</p>
-              <p>400 крон</p>
+              <p data-i18n="belly_line"></p>
+              <p data-i18n="krons_400"></p>
             </div>
             <div class="description-row">
-              <p>Живіт повністю</p>
-              <p>800 крон</p>
+              <p data-i18n="'belly_whole"></p>
+              <p data-i18n="krons_800"></p>
             </div>
           </div>
           <div class="description-parse" id="hands-description">
             <div class="description-row">
-              <p>Руки до ліктя</p>
-              <p>400 крон</p>
+              <p data-i18n="hands_to_the_elbow"></p>
+              <p data-i18n="krons_400"></p>
             </div>
             <div class="description-row">
-              <p>Руки повністю</p>
-              <p>700 крон</p>
+              <p data-i18n="hands_whole"></p>
+              <p data-i18n="krons_700"></p>
             </div>
           </div>
           <div class="description-parse" id="legs-description">
             <div class="description-row">
-              <p>Ноги до коліна</p>
-              <p>800 крон</p>
+              <p data-i18n="legs_to_the_knee"></p>
+              <p data-i18n="krons_800"></p>
             </div>
             <div class="description-row">
-              <p>Ноги вище коліна</p>
-              <p>900 крон</p>
+              <p data-i18n="legs_to_the_knee"></p>
+              <p data-i18n="krons_900"></p>
             </div>
             <div class="description-row">
-              <p>Ноги повністю</p>
-              <p>1400 крон</p>
+              <p data-i18n="legs_whole"></p>
+              <p data-i18n="krons_1400"></p>
             </div>
           </div>
            
@@ -229,7 +226,10 @@
 
     
     {% include 'footer.html' %}   
-    <script src="/static/scripts/laser1.js"></script>
+    <script src="/static/scripts/laser-code1.js"></script>
+    <script type="module" src="{% static '/scripts/laser-data.js'%}"></script>
+    <script type="module" src="{% static '/scripts/header-footer2.js' %}"></script>  
+    
   </body>
  
 </html>
