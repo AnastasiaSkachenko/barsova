@@ -14,16 +14,16 @@
   <body>
     {% include 'header.html' %} 
 
-    <h4 class="title">Залишити відгук</h4>
+    <h4 data-i18n="leave_review" class="title"> </h4>
     <form class="form needs-validation form-box" action="" method="POST"> 
       {% csrf_token %}
 
-      <input type="text" name="name" id="name" class="name-field"  placeholder="Ім'я" oninput="breakValidation(this)" >
-      <div class="invalid-feedback">Будь ласка вкажіть ваше ім'я</div>
+      <input type="text" name="name" id="name" class="name-field dplaceholder"  data-i18n-placeholder="name" oninput="breakValidation(this)" >
+      <div data-i18n="invalid_name" class="invalid-feedback"></div>
 
       
       <div class="stars-box">
-        <h5 class="title-rating">Оцінка:</h5>
+        <h5 data-i18n="rate" class="title-rating"></h5>
         <label onclick="starProcess(1)" class="star label-radio" for="one">★</label>
         <input type="radio" class="btn-check" id="one" value="one" name="star-rating">
         <label onclick="starProcess(2)" class="star  label-radio" for="two">★</label>
@@ -34,20 +34,22 @@
         <input type="radio" class="btn-check" id="four" value="four" name="star-rating">
         <label onclick="starProcess(5)" class="star label-radio" for="five">★</label>
         <input type="radio" class="btn-check" id="five" value="five" name="star-rating">
-        <p id="radio-validation">Будь ласка оцініть наш сервіс</p>
+        <p data-i18n="radio_validation" id="radio-validation"></p>
       </div>   
 
       <select class="service-box" name="service">
-        <option value="electrolysis">Електроепіляція</option>
-        <option value="laser">Лазерна епіляція</option>
+        <option data-i18n="electro" value="electrolysis"></option>
+        <option data-i18n="laser" value="laser"></option>
       </select>
 
-      <textarea class="description-field" placeholder="Відгук" rows="4" name="description"></textarea>
+      <textarea class="description-field dplaceholder" data-i18n-placeholder="review" rows="4" name="description"></textarea>
 
-      <button class="btn btn-primary button-form-submit" onclick=" return validateForm();" type="submit">Надіслати відгук</button>
+      <button data-i18n="submit" class="btn btn-primary button-form-submit" onclick=" return validateForm();" type="submit"></button>
     </form>
 
     {% include 'footer.html' %}    
   </body>
-  <script src="/static/scripts/reviews.js"></script>
+  <script type="module" src="{% static 'scripts/translation_data.js' %}"></script> 
+  <script type="module" src="{% static '/scripts/header_footer.js' %}"></script> 
+  <script src="/static/scripts/leave_review.js"></script>
 </html>

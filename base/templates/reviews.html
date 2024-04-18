@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 
 <!DOCTYPE html>
 <html>
@@ -15,15 +15,19 @@
   <body>
     
     {% include 'header.html' %}
-    <h3>Відгуки</h3>
-    <button class="button-leave-review" onclick="location.href='http://127.0.0.1:8000/leave-review/'">Залишити відгук</button>
+    <h3 data-i18n="reviews"></h3>
+    <button data-i18n="leave_review" class="button-leave-review" onclick="location.href='http://127.0.0.1:8000/leave-review/'"></button>
 
     <div class="reviews-container"></div>
-    <button id="show-more" onclick="showMore()">Показати ще</button>
+    <button data-i18n="show_more" id="show-more" onclick="showMore()"></button>
   
     
 
-    {% include 'footer.html' %}    
-    <script src="{% static 'scripts/review.js'%}"> </script>
+    {% include 'footer.html' %}  
+ 
+
+    <script type="module" src="{% static 'scripts/translation_data.js' %}"></script> 
+    <script type="module" src="{% static '/scripts/header-footer2.js' %}"></script> 
+    <script src="{% static 'scripts/reviews.js' %}"></script>
   </body>
 </html>

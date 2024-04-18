@@ -39,12 +39,4 @@ function updateContent() {
 updateContent();
 
 
-if (placeholders) {
-  document.querySelectorAll('.dplaceholder').forEach(element => { 
-    let key = element.getAttribute('data-i18n-placeholder');
-    
-    let translation = i18next.t(key);
-    element.setAttribute('placeholder', translation);
-  })
-  console.log('fdfs')
-}
+ 

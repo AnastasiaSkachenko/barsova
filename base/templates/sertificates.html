@@ -14,7 +14,7 @@
   <body>
     {% include 'header.html' %} 
 
-     <h4>Мої сертифікати</h4>
+     <h4 data-i18n="my_sertificates"></h4>
 
      <div class="scroller-content" id="scrollerContent">
       {% for image_url in image_urls %}
@@ -27,5 +27,8 @@
 
     {% include 'footer.html' %}    
   </body>
+  <script type="module" src="{% static 'scripts/translation_data.js' %}"></script> 
+  <script type="module" src="{% static '/scripts/header_footer.js' %}"></script> 
+ 
   <script src="{% static '/scripts/sertificates.js' %}"></script> 
 </html>

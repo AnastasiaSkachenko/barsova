@@ -3,14 +3,22 @@ document.getElementById('select-service').addEventListener('change', function() 
   pageChange(this);
 });
 
-function pageChange(selectElement) {
-  console.log(selectElement.value)
+function pageChange(selectElement) { 
   if (selectElement.value == 'laser') {
     window.location.href = 'http://127.0.0.1:8000/laser/'
   } else if(selectElement.value == 'electro') {
     window.location.href = 'http://127.0.0.1:8000/electrolysis/'
   }
 }
+
+document.getElementById('select-price').addEventListener('change', function(event){
+  console.log(event.target.value)
+  if (event.target.value == 'separate') {
+    window.location.href = 'http://127.0.0.1:8000/laser/'
+  } else if(event.target.value == 'laser-packages') {
+    window.location.href = 'http://127.0.0.1:8000/laser-packages/'
+  }
+})
 function displayVector(element) {
   let id = element.id
   let vectors = document.querySelectorAll('.vector') 
@@ -151,36 +159,30 @@ document.querySelector('.photos-to-compare-laser').innerHTML = beforeAfterLaserA
 
 
 
-let recommendationsAll = `<h4 class='move-right'>До процедури</h4> `
+let recommendationsAll = `<h4 data-i18n='before_procedure' class='move-right'></h4> `
 
-let recommendationsBefore = [
-  'Не засмагати під прямим сонячним промінням і в солярії за тиждень до процедури.', 
- 'За 1-1,5 місяці до процедури: для видалення волосся використовувати ТІЛЬКИ бритву (БЕЗ епіляторів, шугарингу, воску тощо).', 
- 'За три доби до ЛЕ НЕ використовувати спиртовмісні речовини на зони, що епілюються.', 'За добу до процедури поголити необхідну зону']
 
-let recommendationsAfter = [
-  'Не наносити спиртовмісні засоби на шкіру в зоні епіляції (добу).',
-  'Не голити цю зону в день після процедури.',
-  'Не виривати волоски пінцетом.',
-  'Під час всього курсу не використовувати електроепілятори, шугаринг, віск тощо.',
-  'Після процедури не засмагати на сонці та в солярії (1 тиждень).',
-  'Не використовувати скраби та пілінги.',
-  'Не відвідувати лазні та сауни (3-4 дні), басейн (7 днів).'
-]
 
-recommendationsBefore.forEach(currentValue => addCircle(currentValue))
+for (let i=1; i<5; i++) {
+  item = i
+  addCircle(item)
+} 
 
-recommendationsAll += `<h4 class='move-right'>Після процедури</h4>
+recommendationsAll += `<h4 data-i18n='after_procedure' class='move-right'></h4>
 <div class="recommendations-photo"></div>`
 
-recommendationsAfter.forEach(currentValue => addCircle(currentValue))
+for (let i=5; i<12; i++) {
+  item = i
+  addCircle(item)
+} 
+
 
 
 function addCircle(string) {
   let recommendation = `
   <div class="recommendation">
     <div class="circle"></div>
-    <p class="recommendation-text">${string}</p>
+    <p data-i18n='recommendation_${string}' class="recommendation-text"></p>
   </div> `
 
   recommendationsAll += recommendation 
@@ -196,49 +198,38 @@ document.querySelector('.recommendations').innerHTML = recommendationsAll
 
 
 
-let contraindicationsHard = `<h4>Абсолюні протипоказання</h4>`
-let contraindicationsLight = `<h4>Віднстні протипоказання</h4>
-                              <h5>Спрершу консультація у лікаря</h5>`
+let contraindicationsHard = `<h4 data-i18n='contraindications_hard'></h4>`
+let contraindicationsLight = `<h4 data-i18n='contraindications_light'></h4>
+                              <h5 data-i18n='first_doctor'></h5>`
 
 let contraindicationsHardList = ['Вагітність, лактація', 'Гострі інфекційні захворювання', 'Цукровий діабет (декопенсована стадія)', 'Келоїдні рубці', 'Герпес', 'Алергія на світло та/або сонце (фотодерматоз)', 'Відвідування солярію або прийняття сонячних ванн в останній тиждень', 'Онкологічне захворювання', 'Світле, сиве волосся']
 let contraindicationsLightList = ['Прийом препаратів, що викликають зміну світлочутливості', 'Наявність ран, садин, подряпин', 'Грип, ГРВІ, застудні захворювання']
 
-function contraindicationCreateItem(item, group) {
-  let contraindication = `
-  <div class="contraindication">
-    <div class="circle"></div>
-    <p class="contraindication-text">${item}</p>
-  </div> `
-
-  group += contraindication 
-}
 
 
-
-
-contraindicationsHardList.forEach(item => { 
+for (let i=1; i<10; i++){
     let contraindication = `
     <div class="contraindication">
       <div class="circle"></div>
-      <p class="contraindication-text-laser">${item}</p>
+      <p data-i18n='contraindication_${i}' class="contraindication-text-laser"></p>
     </div> `
   
     contraindicationsHard += contraindication 
   
-})
+}
 
 
 
-contraindicationsLightList.forEach(item => {
+for (let i=10; i<13; i++){
   let contraindication = `
-    <div class="contraindication">
-      <div class="circle"></div>
-      <p class="contraindication-text-laser">${item}</p>
-    </div> `
-  
-    contraindicationsLight += contraindication 
-  
-})
+  <div class="contraindication">
+    <div class="circle"></div>
+    <p data-i18n='contraindication_${i}' class="contraindication-text-laser"></p>
+  </div> `
+
+  contraindicationsLight += contraindication 
+
+}
  
  
 

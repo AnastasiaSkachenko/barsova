@@ -25,9 +25,9 @@
     {% if page == 'laser' %} 
 
     <div class="separate-page">
-      <select onchange="changePrices(this)" id="select-price">
+      <select   id="select-price">
         <option data-i18n="separate_zones" value="separate"></option>
-        <option data-i18n="beneficial_compelexes" value="laser-packages"></option>
+        <option data-i18n="beneficial_complexes" value="laser-packages"></option>
       </select>
        
       <p data-i18n="tip_cursor" class="tip-cursor"></p>
@@ -61,7 +61,7 @@
           <div data-i18n="breast" class="tip-body-part" id="chest-tip"></div>
           <div data-i18n="bikini" class="tip-body-part" id="bikini-tip"></div>
           <di data-i18n="belly" class="tip-body-part" id="belly-tip"></di>
-          <div data-i18n="hands" class="tip-body-part" id="hands-tip"></div> 
+          <div data-i18n="arms" class="tip-body-part" id="hands-tip"></div> 
           <div data-i18n="legs" class="tip-body-part" id="legs-tip"></div>
         </div>
         <div class="description-container">
@@ -76,7 +76,7 @@
             </div>
             <div class="description-row">
               <p data-i18n="whiskers"></p>      
-              <p data-i18n="whiskers"></p>
+              <p data-i18n="krons_400"></p>
             </div>
             <div class="description-row">
               <p data-i18n="whole_face"></p>
@@ -109,7 +109,7 @@
               <p data-i18n="krons_400"></p>
             </div>
             <div class="description-row">
-              <p data-i18n="'belly_whole"></p>
+              <p data-i18n="belly_whole"></p>
               <p data-i18n="krons_800"></p>
             </div>
           </div>
@@ -149,9 +149,9 @@
     {% if page == 'laser-packages' %}
 
     <div class="packages-page">
-      <select onchange="changePrices(this)" id="select-price">
-        <option value="laser-packages">Вигідні комплекси</option>
-        <option value="separate">Окремі зони</option>
+      <select id="select-price">
+        <option data-i18n="beneficial_complexes" value="laser-packages"></option>
+        <option data-i18n="separate_zones" value="separate"></option>
       </select>
 
       <div class="packages">
@@ -165,27 +165,27 @@
 
         <div class="container">
           <div class="price" onclick="displayVector(this)" id="price-partleg">
-            <p>Пахви та гомілки</p>
-            <p>1100 крон (Звичайна ціна 1400 крон)</p>
+            <p data-i18n="armpits_lower_legs"></p>
+            <p data-i18n="special_price_1100"></p>
           </div>
           <div class="price" onclick="displayVector(this)" id="price-bikini">
-            <p>Пахви та глибоке бікіні</p>
-            <p>1200 крон (Звичайна ціна  1500 крон)</p>
+            <p data-i18n="armpits_deep_bikini"></p>
+            <p data-i18n="special_price_1200"></p>
           </div>
           <div class="price" onclick="displayVector(this)" id="price-legs">
-            <p>Пахви та ноги повністю</p>
-            <p>1600 крон (Звичайна ціна 2000 крон)</p>
+            <p data-i18n="armpits_legs"></p>
+            <p data-i18n="special_price_1600"></p>
           </div>
           <div class="price" onclick="displayVector(this)" id="price-partleg-bikini">
-            <p>Пахви, ноги до коліна та глибоке бікіні</p>
-            <p>1800 крон (Звичайна ціна 2300 крон)</p>
+            <p data-i18n="armpits_lower_legs_bikini"></p>
+            <p data-i18n="special_price_1800"></p>
           </div>
           <div class="price" onclick="displayVector(this)" id="price-leg-bikini">
-            <p>Пахви, ноги повністю та  глибоке бікіні</p>
-            <p>2400 крон (Звичайна ціна 2900 крон)</p>
+            <p data-i18n="armpits_legs_bikini"></p>
+            <p data-i18n="special_price_2400"></p>
           </div>
         </div>
-
+        
        
       </div>
     </div>
@@ -193,14 +193,14 @@
     {% endif %} 
 
 
-    <h3 class="before-after-title">До/Після</h3> 
+    <h3 data-i18n="before_after" class="before-after-title"></h3> 
     <div class="photos-to-compare-laser"></div>
-    <p class="tip-before-after">Наведи курсор на фото, щоб побачити результат</p>
+    <p data-i18n="before_after_tip" class="tip-before-after"></p>
 
     
 
 
-    <h2 class="header-part">Рекомендації</h2>
+    <h2 data-i18n="recommendations" class="header-part"></h2>
     <div class="recommendations"></div>
 
     <div class="circle-photo" id='sun'>
@@ -217,7 +217,7 @@
       <ln class="cross-line"></ln>
       </div>
 
-    <h2 class="header-part">Протипоказання</h2>
+    <h2 data-i18n="contraindications" class="header-part"></h2>
     <div class="contraindication-box-laser">
       <div class="contraindication-hard"></div>
       <div class="contraindication-light"></div>
@@ -226,7 +226,7 @@
 
     
     {% include 'footer.html' %}   
-    <script src="/static/scripts/laser-code1.js"></script>
+    <script src="/static/scripts/laser_c.js"></script>
     <script type="module" src="{% static '/scripts/laser-data.js'%}"></script>
     <script type="module" src="{% static '/scripts/header-footer2.js' %}"></script>  
     

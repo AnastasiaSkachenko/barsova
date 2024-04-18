@@ -14,7 +14,7 @@
   <body>
     {% include 'header.html' %} 
 
-     <h5>Для запису на процедуру чи для консультації звертайтеся за контактами нище</h5>
+     <h5 data-i18n="contact_text"></h5>
 
      <div class="contacts">
         <div class="contact"> 
@@ -36,6 +36,9 @@
      </div>
      <img class="contact-photo" src="{% static 'images/face_contacts.jpg'%}">
 
-    {% include 'footer.html' %}    
+    {% include 'footer.html' %}   
+    <script type="module" src="{% static 'scripts/translation_data.js' %}"></script> 
+    <script type="module" src="{% static '/scripts/header_footer.js' %}"></script> 
+   
   </body> 
 </html>
