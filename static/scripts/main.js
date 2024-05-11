@@ -105,18 +105,21 @@ for (let i = 1; i <= 5; i++) {
 }
 
 
+let changeSize = 250;
+
 document.addEventListener('DOMContentLoaded', function() {
-  const scrollerContent = document.getElementById('scrollerContent')
-  const scrollLeftButton = document.getElementById('scrollLeftButton')
-  const scrollRightButton = document.getElementById('scrollRightButton')
+  const scrollerContent = document.getElementById('scrollerContent');
+  const scrollLeftButton = document.getElementById('scrollLeftButton');
+  const scrollRightButton = document.getElementById('scrollRightButton');
 
   scrollLeftButton.addEventListener('click', function() {
-    scrollerContent.scrollLeft -= 250; 
-  })
+    scrollerContent.scrollLeft -= changeSize; 
+  });
 
   scrollRightButton.addEventListener('click', function() {
-    scrollerContent.scrollLeft += 250;
-  })
-})
+    scrollerContent.scrollLeft += changeSize;
+  });
+});
 
+ 
  

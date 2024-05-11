@@ -47,3 +47,20 @@ function remove() {
 
 
 
+let placeholders = undefined
+
+if (placeholders) {
+  document.querySelectorAll('.dplaceholder').forEach(element => { 
+    let key = element.getAttribute('data-i18n-placeholder');
+    
+    let translation = i18next.t(key);
+    element.setAttribute('placeholder', translation);
+  })
+  console.log('fdfs')
+}
+
+document.getElementById('menu').addEventListener('click', function(event) {
+  document.getElementById('menu-conteiner').style.display = 'block'
+  console.log('sdkn')
+})
+

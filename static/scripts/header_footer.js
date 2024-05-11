@@ -39,12 +39,14 @@ function updateContent() {
 updateContent();
 
 
-if (placeholders) {
-  document.querySelectorAll('.dplaceholder').forEach(element => { 
-    let key = element.getAttribute('data-i18n-placeholder');
-    
-    let translation = i18next.t(key);
-    element.setAttribute('placeholder', translation);
-  })
-  console.log('fdfs')
-}
+document.getElementById('menu').addEventListener('click', function() { 
+  let element = document.getElementById('menu-conteiner');
+  let style = window.getComputedStyle(element);
+  
+  if (style.visibility === 'hidden') {
+    element.style.visibility = 'visible';
+  } else {
+    element.style.visibility = 'hidden';
+  }
+
+});
