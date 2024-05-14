@@ -73,6 +73,7 @@ let translation = i18next.init({
         contraindication25: 'Increased sensitivity to electric current',
         contraindication26: 'Retinoid intake',
         contraindication27: 'Intolerance of metal alloys used in the manufacture of electrodes',
+        tipBeforeAfterMobile: 'Click on the photo to see the result(click on empty area to see before)'
 
       }
     },
@@ -143,7 +144,8 @@ let translation = i18next.init({
         contraindication24: 'Імплантація золотих ниток у зоні проведення процедури',
         contraindication25: 'Підвищена чутливість до електричного струму',
         contraindication26: 'Прийом ретиноїдів',
-        contraindication27: 'Непереносимість металевих сплавів, які використовуються при виготовленні електродів'
+        contraindication27: 'Непереносимість металевих сплавів, які використовуються при виготовленні електродів',
+        tipBeforeAfterMobile: 'Натисни на фото щоб побачити результат(натисни на пусте місце щоб побачити до)'
       }
     }
   }

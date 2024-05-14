@@ -62,8 +62,8 @@ body {
   display: flex;
   transition: transform 0.3s ease; 
   margin-top: 100px;
-  margin-left: 7%;
-  width: 85%;
+  margin-left: 9%;
+  width: 83%;
   position: relative; 
   overflow: hidden;
 }
@@ -163,12 +163,25 @@ body {
 }
 
 
-@media screen and (min-width: 1000px) and (max-width: 1300px) {
+@media screen and (min-width: 800px) and (max-width: 1500px) {
   .scroller-content{
-    width: 70%;
+    width: 77%;
+    margin-left: 11%;
   }
+
 }
 
+@media screen and (max-width: 800px) {
+  .scroller-content{
+    width: 73%;
+    margin-left: 14%;
+  }
+  .body {
+    background-color: red;
+  }
+  
+
+}
 
 @media screen and (min-width: 751px) and (max-width: 1100px) {
   .first-image {
@@ -199,9 +212,21 @@ body {
  
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
+  .links {
+    font-size: 15px;
+  }
+
   .part-main {
     display: inline;
+  }
+
+
+  
+  .before-after-text {
+    margin-left: 37px;
+    margin-top: 40px;
+    color: rgb(111, 111, 111)
   }
 
   .about-main-1, .about-main-2, .about-main-3 {
@@ -209,6 +234,7 @@ body {
     margin-left: 10%;
   }
 
+  
   .first-image, .second-image, .third-image {
     width: 60%;
     margin-left: 20%;
@@ -230,5 +256,32 @@ body {
 
   .about-main-2 {
     margin-top: 70px;
+  }
+
+  .about-main-3 {
+    margin-top: 30px;
+  }
+
+  .before-after-main {
+    margin-top: -40px; 
+  }
+ 
+}
+
+
+@media screen and (max-width: 500px) {
+  .conteiner {
+    margin: 0px;
+  }
+
+  .scroller-content{
+    width: 250px;
+    margin-left: 25%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .scroller-content{ 
+    margin-left: 17%;
   }
 }
