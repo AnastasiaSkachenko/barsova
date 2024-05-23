@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="{% static '/styles/header-footer.css' %}"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="preconnect"> 
   </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <body>
     
@@ -40,7 +41,7 @@
         <div class="container-photo">
           <img class="main-photo" src="/static/images/figure-clean.svg" usemap="#bodyparts" width="400" height="517">
 
-          <map name="bodyparts"> 
+          <map name="bodyparts" id="map-body"> 
             <area class="body-part area" shape="circle" coords="165, 170, 13"  alt="armpit-left" id="armpit-left" onmouseover="showTip(this)" onclick="displayDesctiption(this)" onmouseleave="hideTip(this)">
             <area class="body-part" shape="circle" coords="220, 170, 13"  alt="armpit-right" id="armpit-right" onmouseover="showTip(this)" onmouseleave="hideTip(this)" onclick="displayDesctiption(this)">
             <area class="body-part"  shape="poly" coords="150, 40, 185, 30, 210, 25, 230, 70, 240, 95, 250, 105, 240, 110, 180, 115, 170, 110 " alt="face" id="face-area" onclick="displayDesctiption(this)" onmouseover="showTip(this)" onmouseleave="hideTip(this)">
@@ -192,8 +193,7 @@
 
     {% endif %} 
 
-
-    <h3 data-i18n="before_after" class="before-after-title"></h3> 
+ 
     <div class="photos-to-compare-laser"></div>
     <p data-i18n="before_after_tip" class="tip-before-after"></p>
 
