@@ -7,8 +7,8 @@ body {
   display: flex;
   transition: transform 0.3s ease; 
   margin-top: 100px;
-  margin-left: 100px;
-  width: 1300px;
+  margin-left: 7%;
+  width: 87%;
   position: relative; 
   overflow: hidden; 
 }
@@ -29,22 +29,81 @@ body {
 
 
 #scrollLeftButton {
-  margin-left: 60px;
+  left: 3%;
   margin-top: 40px;
 }
 
 #scrollRightButton {
-  right: 30px;
+  right: 3%;
   margin-top: 40px
 
 }
 h4 {
   margin-left: 45%;
   margin-top: 40px;
+  width: 200px;
 }
 
 .sertificate { 
   width: 350px;
   margin-left: 50px;
   margin-right: 50px;
+}
+
+@media screen and (max-width: 1300px) {
+  .scroller-content {
+    width: 84%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .scroller-content {
+    width: 80%;
+    margin-left: 8%;
+  }
+
+  h4 {
+    margin-left: 40%;
+  }
+
+  #scrollLeftButton {
+    left: 2%;
+  }
+
+  #scrollerRightButton {
+    right: 2%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroller-content {
+    width: 350px;
+    margin-left: 16%;
+    margin-top: 50px;
+  }
+
+  h4 {
+    margin-left: 33%;
+  }
+
+  .sertificate {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #scrollLeftButton {
+    left: 3%;
+  }
+
+  #scrollerRightButton {
+    right: 3%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .scroller-content {
+    width: 350px;
+    margin-left: 13%;
+  }
 }

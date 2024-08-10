@@ -1,6 +1,5 @@
 body {
-  margin: 0;
-  background-color: rgb(254, 205, 235);
+  background-color: rgb(254, 205, 235); 
 }
 
 #select-service {
@@ -14,36 +13,13 @@ body {
   
 }
 
-.text-block {
-  position: relative;
-  width: 500px;
-  display: inline-block;
-  margin-left: 150px;
-  margin-right: 150px;
-  top: -70px;
-}
-
-.prices {
-  width: 550px;
-  display: inline-block;
-  background-color: rgb(254, 150, 209);
-  text-align: center;
-  border-radius: 40px; 
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.title {
-  font-weight: bold;
-}
-
-.photos-to-compare {
+.photos-to-compare-laser {
   display: flex;
   justify-content: space-between;
   width: 1000px; 
   margin-left: 130px;
+  margin-top: 100px;
 }
-
 
 .photo-container {
   position: relative; 
@@ -54,34 +30,35 @@ body {
   position: absolute;
 }
 
-
 .photo-container:hover > .before {
   display: none;
   cursor: pointer;
 }
 
-.before-after-title {
-  margin-left: 100px;
-}
-
-.tip-before-after {
+.tip-before-after, .tip-before-after-mobile {
   margin-left: 100px;
   margin-bottom: 30px;
   margin-top: 300px;
   color: gray
 }
 
+.tip-before-after-mobile {
+  display: none;
+}
+
 
 .circle {
   width: 10px;
-  height: 10px;
-  background-color: black;  
+  height: auto;
+  background-color: black;
   border-radius: 50%;
   margin-right: 20px;
+  min-width: 10px;  
+  min-height: 10px; 
 }
 
 .recommendations, .contraindication-box {
-  margin-left: 120px;
+  margin-left: 8%;
 }
 
 .recommendation, .contraindication {
@@ -91,8 +68,8 @@ body {
 }
 
 .recommendation-text, .contraindication-text {
-  width: 1200px;
-  margin: 10px;
+  width: 92%;
+  margin: 0.75%;
 }
 
 .move-right {
@@ -110,75 +87,50 @@ body {
   border-radius: 50%;  
   display: flex;
   position: absolute;
+  align-items: center;
 }
 
 .recommendation-photo {
   width: 50%;    
-  align-self: center;
-  margin:auto
-}
-
-#glass_of_water {
-  top: -200px;
-  right: 100px;
-}
-
-#shower_icon {
-  right: 250px;
-  top: -20px
-}
-
-#talcum-powder {
-  right: 100px;
-  top: 150px
+  margin: auto;
 }
 
 .header-part {
-  margin: 50px;
- 
+  margin: 4%;
 }
 
-
-
-
-
-
-
- .packages-page { 
-  height: 600px; 
- }
-
+.packages-page { 
+  height: 700px; 
+}
+  
 #select-price {
   border: 1px solid transparent;
   background-color: transparent;
   font-size: 17px;   
   font-weight: 550;
   display: block;
-  margin-left: 1250px; 
+  margin-left: 85%; 
   margin-top: -22px;
   }
 
-
 .container {
-  margin-top: 150px;
-}
+    margin-top: 150px;
+    width: 100%;
+  }
 
 .price {
   display: flex;
-  width: 600px;
+  width: 40%;
+  min-width: 515px;
   justify-content: space-between;
-  margin-left: 700px;
-}
-
-.photo {
-  position: relative;
-  width: 300px;
+  margin-left: 50%;
+  cursor: pointer
 }
 
 .vectors {
   top: -20px;
   position: relative; 
-  left: 150px
+  left: 15%
 }
 
 .vector {
@@ -192,8 +144,7 @@ body {
 }
 
 .choosed {
-  color: gray;
-  cursor: pointer
+  color: rgb(100, 99, 99);
 }
 
 .packages {
@@ -201,4 +152,450 @@ body {
 }
 
 
+
+.laser-detailes {
+  display: flex;
+}
+
+.tip-cursor {  
+  color:gray;
+  margin-left: 35%;
+  min-width: 400px; 
+  width: 40%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.description {
+  width: 80%;
+  line-height: 1.25;
+}
+
+
+.laser-text {
+  margin-left: 10%;
+  margin-top: 100px; 
+  width: 30%;
+}
+
+.laser-text .description {
+  width: 95%;
+}
+
+
+.container-photo {
+  margin-left: -20px;
+}
+
+.main-photo {
+  width: 400px; 
+}
+
+.tip-container {
+  position: relative;
+}
+
+.tip-body-part { 
+  visibility: hidden; 
+  background-color: rgb(247, 246, 246);
+  border: 2px solid rgb(222, 220, 220);
+  color: rgb(133, 132, 132);
+  font-size: 12px;
+  width: 35px;
+  padding: 2px; 
+  position: absolute;  
+}
+
+.area {
+  cursor: pointer;
+}
+
+.description-parse{
+  position: absolute;
+  max-width: 300px;
+  width: 100%;
+  min-width: 250px;
+  padding: 20px;
+  background-color: rgb(254, 150, 209);
+  border-radius: 30px;
+  visibility: hidden;
+}
+
+#face-description, #legs-description {
+  top: 150px
+}
+
+.description-row {
+  display: flex;
+  justify-content: space-between;  
+}
+
+
+#armpits-description, #chest-description, #belly-description, #bikini-description, #hands-description {
+  top: 200px;  
+}
+
+
+
+.description-container {
+  position: relative;
+  width: 25%;
+}
+
+
+.contraindication-hard, .contraindication-light {
+  display: inline-block;
+  width: 40%;
+}
+
+.contraindication-text-laser { 
+  margin: 10px
+}
+
+.contraindication-hard {
+  margin-left: 10%;
+}
+
+.contraindication-light {
+  margin-top: 10px;
+}
+
+
+.cross-line {
+  width: 200px;
+  transform: rotate(135deg); 
+  background-color: red;
+  height: 5px;
+  z-index: 3;
+  margin-left: -100px;
+}
+
+.recommendation-photo-laser { 
+  width: 70px;
+  margin: 15px
+}
+ 
+
+#sun {
+  left: 75%;
+  top: 1200px
+}
+
+#razor {
+  left: 90%;
+  top: 1400px
+}
+
+#tweezers {
+  left: 73%;
+  top: 1550px
+  
+}
+
+.contraindication-box-laser {
+  display: flex;
+}
+
+@media screen and (min-width: 57px) and (max-width: 1400px) {
+  #select-service {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .vectors {
+    left: 4%
+  }  
+
+  .photos-to-compare-laser { 
+    width: 90%;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    height: 270px;
+    margin-left: 5%;
+    }
+
+  .photo-container {
+    margin-right: 260px; 
+  }
+}
+
+@media screen and (min-width: 570px) and (max-width: 1400px) {
+  .tip-before-after{ 
+    margin-top: 30px; 
+  }
+
+  #select-price { 
+    margin-left: 80%;
+    margin-top: -27px;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1040px) {
+  .text-block {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #razor, #tweezers, #sun {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1300px) {
+  .description-parse {
+    margin-left: -10%;
+  }
+
+  .laser-text {
+    margin-left: 7%;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1050px) {
+  #select-service {
+    margin-bottom: 15px;
+  }
+
+  .description-container {
+    margin-left: -15%; 
+  }
+
+  .vectors {
+    left: -5%;
+  }
+
+  .price {
+    margin-left: 34%;
+  }
+
+  .main-photo {
+    margin-left: -10%;
+  }
+
+  .laser-text {
+    width: 35%;
+    margin-right: 70px;
+  }
+}
+
+@media screen and (min-width:570px) and (max-width: 1000px) {
+
+  #select-price {
+    margin-left: 75%;
+  }
+}
+
+@media screen and (min-width: 570px) and (max-width: 820px) {
+  .laser-detailes {
+    flex-direction: column;
+  }
+
+  .container {
+    margin-top: 550px;
+  }
+
+  .price {
+    margin-left: 0%;
+  }
+
+  .vectors {
+    margin-left: 20%;
+  }
+
+  .packages-page {
+    padding-bottom: 180px;
+  }
+  
+  .description-container {
+    margin-top: -520px;
+    margin-left: 65%;
+    margin-bottom: 500px;
+  }
+
+  .contraindication-hard {
+    margin-left: 8%;
+  }
+
+  .contraindication-hard, .contraindication-light {
+    width: 45%;
+  }
+
+  .tip-cursor {
+    margin-left: 15%;
+    margin-top: 200px;
+  }
+
+  .main-photo {
+    margin-left: 25%;
+    margin-top: 50px;
+  }
+
+  .laser-text {
+    margin-top: -220px;
+    width: 80%;
+    margin-left: 12%;
+  }
+
+  #select-price {
+    margin-left: 70%; 
+    margin-bottom: 15px;
+  }
+
+  #razor, #tweezers, #sun {
+    display: none;
+  }
+
+  .text-block { 
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 30px;
+  }
+
+  #select-service {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .laser-detailes {
+    flex-direction: column;
+  }
+
+  .container {
+    margin-top: 550px;
+  }
+
+  .price {
+    margin-left: 0%; 
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .price p {
+    margin: 4px;
+  }
+
+  .vectors {
+    margin-left: 10%;
+  }
+.packages-page {
+  padding-bottom: 180px;
+}
+
+  #razor, #tweezers, #sun {
+    display: none;
+  }
+
+  .container-prices {
+    display: block;
+  }
+
+  .laser-detailes {
+    flex-direction: column;
+  }
+
+  .description-container {
+    margin-top: -520px;
+    margin-left: 80%;
+    margin-bottom: 550px;
+  }
+
+  .contraindication-box-laser {
+    flex-direction: column;
+  }
+
+  .recommendations {
+    margin-left: 5%;
+  }
+
+  .contraindication-hard, .contraindication-light {
+    width: 90%;
+    margin-left: 8%;
+  }
+
+  .tip-cursor { 
+    margin-top: 220px; 
+    text-align: center;
+    margin-left: 10%;
+  }
+
+  .main-photo {
+    margin-left: 15%;
+    margin-top: 50px;
+  }
+
+  .laser-text {
+    margin-top: -270px;
+    width: 80%;
+    margin-left: 12%;
+  }
+
+  #select-price {
+    margin-left: 57%;
+    margin-bottom: 15px;
+  }
+
+
+  .text-block { 
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 30px;
+  }
+
+  .prices { 
+    width: 85%;
+    margin-left: 7.5%;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  body {
+    width: 100%;
+    padding-top: 165px;
+    overflow-x: hidden;
+  }
+
+  #select-service { 
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+
+  .tip-before-after{
+    display: none;
+  }
+
+  .tip-before-after-mobile{
+    display: block;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+ 
+ 
+
+ .photo-container {
+  margin-right: 260px; 
+ }
+
+ .recommendation-text, .contraindication-text { 
+  margin: 2%;
+}
+
+.circle-photo {
+  width: 50px;
+  height: 50px;
+}
+
+.recommendation-photo {
+  width: 60%;
+}
+
+#glass_of_water, #shower_icon, #talcum-powder {
+display: none;
+}
+ 
+
+}
 

@@ -15,11 +15,11 @@ let translation = i18next.init({
         Each hair is removed separately.
         The specialist inserts a special needle into the hair follicle
         and thermal discharge solders the follicle.`,
-        oneHour: '1 hour of work in any zone - 900 sek',
+        oneHour: '1 hour of work in any zone - 105$',
         favorableRates: 'Favorable rates', 
-        twoHours: '2 hours - 1600 krons (instead of 1800 kroner)',
-        fiveHours: '5 hours - 3500 kroner (instead of 4500 kroner)',
-        tenHours: '10 hours - 6,500 kroner (instead of 9,000 kroner)',
+        twoHours: '2 hours - 200$ (instead of 210$)',
+        fiveHours: '5 hours - 475$ (instead of 525$)',
+        tenHours: '10 hours - 900$ (instead of  1050$)',
         extra: 'Extra',
         injection: 'Injection anesthesia - 25 crowns per ampoule',
         aplication: 'Application anesthesia - 350 kroner per tube',
@@ -73,7 +73,7 @@ let translation = i18next.init({
         contraindication25: 'Increased sensitivity to electric current',
         contraindication26: 'Retinoid intake',
         contraindication27: 'Intolerance of metal alloys used in the manufacture of electrodes',
-        tipBeforeAfterMobile: 'Click on the photo to see the result'
+        tipBeforeAfterMobile: 'Click on the photo to see the result(click on empty area to see before)'
 
       }
     },
@@ -87,11 +87,11 @@ let translation = i18next.init({
         Видалення відбувається кожного волоска окремо. 
         Спеціаліст вводить спеціальну голку у волосяний фолікул 
         та термічним розрядом зпаює фолікул.`,
-        oneHour: '1 година роботи на будь якій зоні - 900 sek',
+        oneHour: '1 година роботи на будь якій зоні - 105$',
         favorableRates: 'Вигідні тарифи',
-        twoHours: '2 години - 1600 крон (замість 1800 крон)',
-        fiveHours: '5 годин - 3500 крон (замість 4500 крон)', 
-        tenHours: '10 годин - 6500 крон (замість 9000 крон)',
+        twoHours: '2 години - 200$ (замість 210$)',
+        fiveHours: '5 годин - 475$ (замість 525$)', 
+        tenHours: '10 годин - 900$ (замість 1050$)',
         extra: 'Додатково',
         injection: 'Ін’єкційне знеболення - 25 крон за ампулу',
         aplication: 'Аплікаційне знеболення - 350 крон за тюбик',
@@ -145,41 +145,30 @@ let translation = i18next.init({
         contraindication25: 'Підвищена чутливість до електричного струму',
         contraindication26: 'Прийом ретиноїдів',
         contraindication27: 'Непереносимість металевих сплавів, які використовуються при виготовленні електродів',
-        tipBeforeAfterMobile: 'Click on the photo to see the result'
+        tipBeforeAfterMobile: 'Натисни на фото щоб побачити результат(натисни на пусте місце щоб побачити до)'
       }
     }
   }
 })
 
 
-document.getElementById('select-service').addEventListener('change', function() {
-  pageChange(this);
-});
-
-function pageChange(selectElement) {
-  console.log(selectElement.value)
-  if (selectElement.value == 'laser1') {
-    window.location.href = 'http://127.0.0.1:8000/laser/'
-  } else if(selectElement.value == 'electro1') {
-    window.location.href = 'http://127.0.0.1:8000/electrolysis/'
-  }
-}
+ 
 
 
 
-let beforeAfterLaserAll = ``
+let beforeAfterElectroAll = ``
 
 
 for (let i=1; i<5; i++) {
-  let beforeAfterLaser = `<div class="photo-container">
-      <img class="after" src="/static/images/after_${i}.png">
-      <img class="before" src="/static/images/before_${i}.png">
+  let beforeAfterElectro = `<div class="photo-container">
+      <img class="after" src="/static/images/after_${i}.jpg">
+      <img class="before" src="/static/images/before_${i}.jpg">
     </div> \n`
 
-  beforeAfterLaserAll += beforeAfterLaser
+  beforeAfterElectroAll += beforeAfterElectro
 }
  
-document.querySelector('.photos-to-compare').innerHTML = beforeAfterLaserAll
+document.querySelector('.photos-to-compare').innerHTML = beforeAfterElectroAll
 
 
 

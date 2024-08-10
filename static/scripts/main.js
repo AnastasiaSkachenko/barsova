@@ -75,11 +75,11 @@ let translation = i18next.init({
 let beforeAfterAll = ``
 
 
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 6; i++) {
   let beforeAfterOne = `<div class="conteiner">
   <div class="compare">
-    <div class="before" style="background: url('/static/images/before_${i}.png');">
-      <div class="after" id='after${i}' style="background: url('/static/images/after_${i}.png');"></div>
+    <div class="before" style="background: url('/static/images/before_${i}.jpg');">
+      <div class="after" id='after${i}' style="background: url('/static/images/after_${i}.jpg');"></div>
     </div>
     <input type="range" min="0" max="250" step="10" id="compare${i}">
   </div>
@@ -93,7 +93,7 @@ for (let i = 1; i <= 5; i++) {
 document.querySelector('#scrollerContent').innerHTML = beforeAfterAll
 
 
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 6; i++) {
   document.querySelector(`.compare #compare${i}`).addEventListener('input', function(e){
     document.querySelector(`.compare .before #after${i}`).style.width = (+e.target.value) + 'px';
   });

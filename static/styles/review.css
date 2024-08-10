@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: rgb(254, 205, 235);
+  overflow-x: hidden;
 }
 
 
@@ -68,6 +69,7 @@ body {
   font-weight: 600;
   padding-top: 10px;
   padding-bottom: 10px; 
+  display: none;
 }
 
 .service-box:focus, .name-field:focus, .description-field:focus {
@@ -95,13 +97,13 @@ body {
 }
 
 h3 {
-  margin-left: 100px;
+  margin-left: 7%;
   margin-top: 50px;
   margin-bottom: 0px;
 }
 
 .button-leave-review {
-  margin-left: 1300px;
+  margin-left: 80%;
   padding: 15px;
   padding-left: 35px;
   padding-right: 35px;
@@ -109,10 +111,11 @@ h3 {
   border-radius: 10px;
   border:none;
   cursor: pointer;
+  min-width: 150px;
 }
 
 .reviews-container {
-  margin-left: 100px;
+  margin-left: 5%;
 }
 
 .review-container p {
@@ -125,7 +128,7 @@ h3 {
   padding: 20px;
   margin: 30px;
   background-color: rgba(128, 128, 128, 0.053);
-  width: 1200px;
+  width: 90%;
 }
 
 .review-name {
@@ -159,4 +162,27 @@ h3 {
 
 .visible-review {
   display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .button-leave-review {
+    margin-left: 70%;
+  }
+
+  .review-container {
+    width: 80%;
+  }
+
+  #show-more {
+    margin-left: 42%;
+  }
+
+  .name-field, .description-field {
+    width: 400px;
+  }
+
+  .title {
+    margin-left: 35%;
+    width: 200px;
+  }
 }
